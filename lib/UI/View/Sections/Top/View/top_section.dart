@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:portfolio/UI/View/Sections/Top/components/logo_blur_box.dart';
+import 'package:portfolio/UI/View/Sections/Top/components/menu.dart';
+import 'package:portfolio/UI/View/Sections/Top/components/person_img.dart';
+import 'package:portfolio/Utils/Constants/image_constant.dart';
+import 'package:portfolio/Utils/Constants/style_constant.dart';
+
+class TopSection extends StatelessWidget {
+  const TopSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return Container(
+      alignment: Alignment.center,
+      constraints: BoxConstraints(maxHeight: size.height*0.8, minHeight: size.height*0.5),
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(AppImages.keyboardsImage),
+        ),
+      ),
+      child: Container(
+        margin: const EdgeInsets.only(top: AppStyle.dDefaultPadding),
+        width: size.width*0.625,
+        child: Stack(
+          children: [
+            LogoAndBlurBox(size: size),
+            Positioned(
+              bottom: size.height*0.05,
+              right: size.width*0.05,
+              child: PersonImg(size: size),
+            ),
+            Positioned(
+              bottom: 0,
+              child: Menu(size: size),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
