@@ -32,6 +32,9 @@ class AppTxtStyle {
   static TextStyle boldButtonColorTxtStyle(BuildContext context) {
     return GoogleFonts.nunitoSans(fontWeight: FontWeight.w600,fontSize: 18,color: AppColor.bgBlackClr);
   }
+  static TextStyle boldButtonColorTxtStyle2(BuildContext context) {
+    return GoogleFonts.nunitoSans(fontWeight: FontWeight.w600,fontSize: 20,color: AppColor.bgBlackClr);
+  }
 
   TextStyle customStyle({fontSize, fontWeight, required Color color}) {
     return GoogleFonts.nunitoSans(

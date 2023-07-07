@@ -13,10 +13,10 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // TopSection(),
-            // SizedBox(height: AppStyle.dDefaultPadding * 2),
-            // AboutSection(),
-            // ServiceSection(),
+            TopSection(),
+            SizedBox(height: AppStyle.dDefaultPadding * 2),
+            AboutSection(),
+            ServiceSection(),
             ProjectsSection(),
             SizedBox(height: AppStyle.dDefaultPadding),
             // ContactSection(),

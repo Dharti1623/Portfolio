@@ -43,8 +43,7 @@ class AppStrings {
   ///[recent works section]
 
   static const String startingNewProjectTxt = 'Starting New Project?';
-  static const String estimateNewProjectTxt =
-      'Get an estimate for the new project';
+  static const String estimateNewProjectTxt ='Get an estimate for the new project';
   static const String recentWorksTxt = 'Project Details';
 
   ///[contact section]

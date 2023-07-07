@@ -14,7 +14,7 @@ class ServiceSection extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: AppStyle.dDefaultPadding * 2),
-      constraints: BoxConstraints(maxWidth: size.width),
+      // constraints: BoxConstraints(maxWidth: 1110),
       width: double.infinity,
       child: Column(
         children: [

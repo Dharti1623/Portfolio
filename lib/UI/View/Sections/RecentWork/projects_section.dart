@@ -15,9 +15,11 @@ class ProjectsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return  Container(
-      margin: EdgeInsets.only(top: AppStyle.dDefaultPadding * 6),
-      constraints: BoxConstraints(maxWidth: size.width),
+      // constraints: BoxConstraints(maxWidth: 1110),
       width: double.infinity,
+      margin: EdgeInsets.only(top: AppStyle.dDefaultPadding * 6),
+      // constraints: BoxConstraints(maxWidth: size.width),
+      // width: double.infinity,
       decoration: BoxDecoration(
         color: AppColor.boxDecorationColor1.withOpacity(0.3),
         image: DecorationImage(
@@ -27,14 +29,14 @@ class ProjectsSection extends StatelessWidget {
       ),
       child: Column(
         children: [
-          // Transform.translate(
-          //   offset: Offset(0, -80),
-          //   child: HireMeCard(size: size,),
-          // ),
+          Transform.translate(
+            offset: Offset(0, -80),
+            child: FittedBox(child: HireMeCard(size: size,)),
+          ),
           SectionTitle(
             size: size,
             color: AppColor.projectsSectionTitleLineClr,
-            title: AppStrings.technicalSkillsTxt,
+            title: AppStrings.recentWorksTxt,
             subTitle: AppStrings.myStrongArenasTxt,
           ),
           SizedBox(height: AppStyle.dDefaultPadding * 1.5),

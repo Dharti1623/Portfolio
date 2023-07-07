@@ -23,13 +23,12 @@ class HireMeCard extends StatelessWidget {
         children: [
           Image.asset(
             AppImages.emailImage,
-            height: 80,
-            width: 80,
+            height: size.height*0.09,
           ),
-          const Padding(
+           Padding(
             padding: EdgeInsets.symmetric(horizontal: AppStyle.dDefaultPadding),
             child: SizedBox(
-              height: 80,
+              height: size.height*0.1,
               child: VerticalDivider(),
             ),
           ),

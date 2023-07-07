@@ -20,7 +20,7 @@ class ProjectDetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('dharti-->${size.width * 0.285}');
+    print('dharti-->${size.width * 0.282}');
     return Obx(() => InkWell(
         onTap: press,
         onHover: (value) {
@@ -28,8 +28,8 @@ class ProjectDetailsCard extends StatelessWidget {
         },
         child: AnimatedContainer(
           duration: Duration(milliseconds: 200),
-          height: size.height * 0.36,
-          width: 540,
+          height: size.height * 0.35,
+          width: size.width * 0.25,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
@@ -37,30 +37,29 @@ class ProjectDetailsCard extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Image.asset(projectDetails[index].image),
+              Image.asset(projectDetails[index].image,height: size.height*0.2,width: size.width*0.1,),
               Expanded(
                 child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: AppStyle.dDefaultPadding),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(projectDetails[index].category.toUpperCase()),
-                      SizedBox(height: AppStyle.dDefaultPadding / 2),
-                      Text(
-                        projectDetails[index].title,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineSmall!
-                            .copyWith(height: 1.5),
-                      ),
-                      SizedBox(height: AppStyle.dDefaultPadding),
-                      Text(
-                        AppStrings.viewDetailsTxt,
-                        style: AppTxtStyle.underlineStyle(context),
-                      )
-                    ],
+                  padding:EdgeInsets.symmetric(horizontal: size.width*0.02),
+                  child: FittedBox(
+                    fit: BoxFit.fitHeight,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(projectDetails[index].category.toUpperCase(),style: AppTxtStyle.boldButtonColorTxtStyle(context)),
+                        SizedBox(height: AppStyle.dDefaultPadding/2),
+                        Text(
+                          projectDetails[index].title,
+                          style: AppTxtStyle.boldButtonColorTxtStyle2(context),
+                        ),
+                        SizedBox(height: AppStyle.dDefaultPadding*0.2),
+                        Text(
+                          AppStrings.viewDetailsTxt,
+                          style: AppTxtStyle.underlineStyle(context),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
