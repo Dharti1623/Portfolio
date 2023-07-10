@@ -20,7 +20,6 @@ class ProjectDetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('dharti-->${size.width * 0.282}');
     return Obx(() => FittedBox(
       child: InkWell(
           onTap: press,
@@ -38,26 +37,31 @@ class ProjectDetailsCard extends StatelessWidget {
             ),
             child: Row(
               children: [
+                SizedBox(width: AppStyle.dDefaultPadding/2),
                 Image.asset(projectDetails[index].image,height: size.height*0.2,width: size.width*0.1,),
                 Expanded(
                   child: Padding(
                     padding:EdgeInsets.symmetric(horizontal: size.width*0.02),
                     child: FittedBox(
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.fitWidth,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(projectDetails[index].category.toUpperCase(),style: AppTxtStyle.boldButtonColorTxtStyle(context)),
+                          FittedBox(child: Text(projectDetails[index].category.toUpperCase(),style: AppTxtStyle.boldButtonColorTxtStyle(context))),
                           SizedBox(height: AppStyle.dDefaultPadding/2),
-                          Text(
-                            projectDetails[index].title,
-                            style: AppTxtStyle.boldButtonColorTxtStyle2(context),
+                          FittedBox(
+                            child: Text(
+                              projectDetails[index].title,
+                              style: AppTxtStyle.boldButtonColorTxtStyle2(context),
+                            ),
                           ),
                           SizedBox(height: AppStyle.dDefaultPadding*0.2),
-                          Text(
-                            AppStrings.viewDetailsTxt,
-                            style: AppTxtStyle.underlineStyle(context),
+                          FittedBox(
+                            child: Text(
+                              AppStrings.viewDetailsTxt,
+                              style: AppTxtStyle.underlineStyle(context),
+                            ),
                           )
                         ],
                       ),

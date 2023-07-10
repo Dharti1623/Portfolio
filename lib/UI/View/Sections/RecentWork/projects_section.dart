@@ -21,7 +21,7 @@ class ProjectsSection extends StatelessWidget {
       // constraints: BoxConstraints(maxWidth: size.width),
       // width: double.infinity,
       decoration: BoxDecoration(
-        color: AppColor.boxDecorationColor1.withOpacity(0.3),
+        color: AppColor.projectBoxDecorationColor.withOpacity(0.3),
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage(AppImages.recentWorkBgImage),
@@ -31,7 +31,7 @@ class ProjectsSection extends StatelessWidget {
         children: [
           Transform.translate(
             offset: Offset(0, -80),
-            child: FittedBox(child: HireMeCard(size: size,)),
+            child: HireMeCard(size: size,),
           ),
           SectionTitle(
             size: size,

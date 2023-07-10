@@ -17,8 +17,8 @@ class Menu extends StatelessWidget {
   List<String> menuItems = [
     AppStrings.homeTxt,
     AppStrings.aboutTxt,
-    AppStrings.servicesTxt,
     AppStrings.projectsTxt,
+    AppStrings.servicesTxt,
     AppStrings.contactTxt
   ];
 

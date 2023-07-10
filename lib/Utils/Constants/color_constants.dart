@@ -7,7 +7,7 @@ class AppColor {
   static const bgWhiteClr = Color(0xFFFFFFFF);
   static const bgMarronClr = Color(0xFFB40C0C);
   static const bgRedClr = Colors.red;
-  static const bgGreenClr = Colors.green;
+  static const bgGreenClr = Color(0xFF07E24A);
   static const transparentClr = Colors.transparent;
 
   static const serviceSectionTitleLineClr = Color(0xFFFF0000);
@@ -16,8 +16,9 @@ class AppColor {
   static const dTextColor = Color(0xFF707070);
   static const dTextLightColor = Color(0xFF555555);
 
-  static const boxDecorationColor1 = Color(0xFFF7E8FF);
+  static const projectBoxDecorationColor = Color(0xFFF7E8FF);
   static const boxDecorationColor2 = Color(0xFFEDD2FC);
+  static const contactBoxDecorationColor = Color(0xFFE8F0F9);
   static Color boxShadowColor = const Color(0xFFA600FF);
   static Color outlineButtonBorderColor = const Color(0xFFEDEDED);
   static Color defaultButtonBgColor = const Color(0xFFA3C2E5);

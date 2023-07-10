@@ -72,7 +72,7 @@ List<ProjectDetails> projectDetails = [
     techStack: 'Flutter',
     database: '-',
     role: 'Project development, testing website',
-    category: "Demo",
+    category: "Demo Project",
     image: AppImages.work5Image,
   ),
 ];

@@ -16,7 +16,7 @@ class ExperienceCard extends StatelessWidget {
       height: size.height * 0.27,
       width: size.width * 0.14,
       decoration: BoxDecoration(
-        color: AppColor.boxDecorationColor1,
+        color: AppColor.projectBoxDecorationColor,
         borderRadius: BorderRadius.circular(10),
       ),
       child: DecoratedBox(
