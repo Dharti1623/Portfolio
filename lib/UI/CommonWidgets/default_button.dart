@@ -27,7 +27,7 @@ class DefaultButton extends StatelessWidget {
       ),
       onPressed: press,
       child: FittedBox(
-        fit: BoxFit.fitWidth,
+        fit: BoxFit.fitHeight,
         child: Row(
           children: [
             Image.asset(imageSrc, height: 30),
