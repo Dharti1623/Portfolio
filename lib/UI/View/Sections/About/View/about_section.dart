@@ -4,9 +4,11 @@ import 'package:portfolio/UI/CommonWidgets/my_outline_button.dart';
 import 'package:portfolio/UI/View/Sections/About/Components/about_section_text.dart';
 import 'package:portfolio/UI/View/Sections/About/Components/about_text.dart';
 import 'package:portfolio/UI/View/Sections/About/Components/experience_card.dart';
+import 'package:portfolio/UI/View/Sections/Top/components/menu.dart';
 import 'package:portfolio/Utils/Constants/image_constant.dart';
 import 'package:portfolio/Utils/Constants/string_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
@@ -39,23 +41,25 @@ class AboutSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: AppStyle.dDefaultPadding * 3),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyOutlineButton(
-                size: size ,
-                imageSrc: AppImages.handImage,
-                text:AppStrings.hireMeTxt,
-                press: () {},
-              ),
-              SizedBox(width: size.width*0.01),
-              DefaultButton(
-                size: size ,
-                imageSrc: AppImages.downloadImage,
-                text: AppStrings.downloadCvTxt,
-                press: () {},
-              ),
-            ],
+          FittedBox(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MyOutlineButton(
+                  size: size ,
+                  imageSrc: AppImages.handImage,
+                  text:AppStrings.hireMeTxt,
+                  press: hireMe,
+                ),
+                SizedBox(width: size.width*0.01),
+                DefaultButton(
+                  size: size ,
+                  imageSrc: AppImages.downloadImage,
+                  text: AppStrings.downloadCvTxt,
+                  press: downLoadCv,
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/UI/View/Sections/Contact/Components/contact_form.dart';
 import 'package:portfolio/UI/View/Sections/Contact/Components/social_card.dart';
+import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/image_constant.dart';
+import 'package:portfolio/Utils/Constants/string_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 
 class ContactBox extends StatelessWidget {
   Size size;
@@ -33,24 +36,27 @@ class ContactBox extends StatelessWidget {
               children: [
                 SocialCards(
                   size: size,
-                  color: Color(0xFFD9FFFC),
-                  iconSrc: AppImages.skypeImage,
-                  name: 'TheFlutterWay',
-                  press: () {},
+                  // color: Color(0xFFD9FFFC),
+                  color: AppColor.linkedInColor,
+                  iconSrc: AppImages.linkedInImage,
+                  name: AppStrings.linkedInDataTxt,
+                  press: launchLinkedin,
                 ),
                 SocialCards(
                   size: size,
-                  color: Color(0xFFE4FFC7),
-                  iconSrc: AppImages.whatsappImage,
-                  name: 'TheFlutterWay',
-                  press: () {},
-                ),
-                SocialCards(
-                  size: size,
-                  color: Color(0xFFE8F0F9),
+                  // color: Color(0xFFE8F0F9),
+                  color: AppColor.instagramColor,
                   iconSrc: AppImages.messengerImage,
-                  name: 'TheFlutterWay',
-                  press: () {},
+                  name: AppStrings.messengerDataTxt,
+                  press: launchInstagram,
+                ),
+                SocialCards(
+                  size: size,
+                  // color: Color(0xFFE4FFC7),
+                  color: AppColor.whatsappColor,
+                  iconSrc: AppImages.facebookImage,
+                  name: AppStrings.whatsappDataTxt,
+                  press: launchFacebook,
                 ),
               ],
             ),

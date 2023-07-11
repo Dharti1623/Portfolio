@@ -49,9 +49,9 @@ class AppStrings {
   ///[contact section]
   static const String contactMeTxt = 'Contact Me';
   static const String forInfoTxt = 'For Project inquiry and information';
-  static const String skypeIdDataTxt = '';
-  static const String whatsappDataTxt = '';
-  static const String messengerDataTxt = '';
+  static const String linkedInDataTxt = 'Let\'s Connect!';
+  static const String whatsappDataTxt = 'Let\'s Connect!';
+  static const String messengerDataTxt = 'Let\'s Connect!';
   static const String yourNameTxt = 'Your Name';
   static const String enterNameTxt = 'Enter your name';
   static const String emailAddressTxt = 'Email Address';
@@ -62,6 +62,7 @@ class AppStrings {
   static const String selectBudgetTxt = 'Select Project Budget';
   static const String descriptionTxt = 'Description';
   static const String writeSomethingTxt = 'Write some description';
+  static const String thankYouMsgTxt = 'Thank you for Contacting Us!';
 
   ///[Error messages]
   static const String pleaseTryAgainTxt = 'Please Try Again';

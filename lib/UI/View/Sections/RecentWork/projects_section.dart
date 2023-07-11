@@ -47,7 +47,7 @@ class ProjectsSection extends StatelessWidget {
               runSpacing: AppStyle.dDefaultPadding * 2,
               children: List.generate(
                 projectDetails.length,
-                    (index) => ProjectDetailsCard(index: index, press: () {}, size: size,),
+                    (index) => ProjectDetailsCard(index: index, size: size,),
               ),
             ),
           ),

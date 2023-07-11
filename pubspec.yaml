@@ -39,6 +39,8 @@ dependencies:
   get: ^4.6.5
   google_fonts: ^5.1.0
   pretty_button: ^0.0.5
+  url_launcher: ^6.1.12
+  mailto: ^2.0.0
 
 
 dev_dependencies:

@@ -23,4 +23,8 @@ class AppColor {
   static Color outlineButtonBorderColor = const Color(0xFFEDEDED);
   static Color defaultButtonBgColor = const Color(0xFFA3C2E5);
   static Color textColor1 = const Color(0xFFDFA3FF).withOpacity(0.5);
+
+  static const whatsappColor = Color(0xffc6d5fc);
+  static const linkedInColor = Color(0xFFD0EBFA);
+  static const instagramColor = Color(0xfff8cedf);
 }

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/UI/View/HomePageModule/homepage.dart';
 import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/image_constant.dart';
 import 'package:portfolio/Utils/Constants/string_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 RxInt selectedIndex = 0.obs;
-
 // ignore: must_be_immutable
 class Menu extends StatelessWidget {
   final Size size;
@@ -14,6 +15,7 @@ class Menu extends StatelessWidget {
   Menu({super.key, required this.size});
 
   RxInt hoverIndex = 0.obs;
+
   List<String> menuItems = [
     AppStrings.homeTxt,
     AppStrings.aboutTxt,
@@ -55,6 +57,7 @@ class Menu extends StatelessWidget {
     return InkWell(
       onTap: () {
         selectedIndex.value = index;
+        scrollToCounter();
       },
       onHover: (value) {
         value
@@ -98,4 +101,10 @@ class Menu extends StatelessWidget {
       ),
     );
   }
+
+}
+Future scrollToCounter() async {
+  await controller.value.scrollToIndex(selectedIndex.value,
+      preferPosition: AutoScrollPosition.begin);
+  controller.value.highlight(selectedIndex.value);
 }

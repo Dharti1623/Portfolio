@@ -35,6 +35,7 @@ class AppImages{
   static const String resumeImage = 'assets/images/PNG/resume.png';
   static const String resumeBoyImage = 'assets/images/PNG/resume_boy.png';
   static const String skypeImage = 'assets/images/PNG/skype.png';
+  static const String linkedInImage = 'assets/images/PNG/linkedIn.png';
   static const String vueJsImage = 'assets/images/PNG/vue_js.png';
   static const String webImage = 'assets/images/PNG/web.png';
   static const String work1Image = 'assets/images/PNG/work-1.png';
@@ -43,6 +44,7 @@ class AppImages{
   static const String work4Image = 'assets/images/PNG/work-4.png';
   static const String work5Image = 'assets/images/PNG/work-5.png';
   static const String whatsappImage = 'assets/images/PNG/whatsapp.png';
+  static const String facebookImage = 'assets/images/PNG/facebook.png';
 
 
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/UI/CommonWidgets/section_title.dart';
 import 'package:portfolio/UI/View/Sections/Contact/Components/contact_box.dart';
-import 'package:portfolio/UI/View/Sections/Contact/Components/social_card.dart';
 import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/image_constant.dart';
 import 'package:portfolio/Utils/Constants/string_constants.dart';
