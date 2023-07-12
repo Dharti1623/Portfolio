@@ -18,7 +18,7 @@ class TopSection extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(AppImages.keyboardsImage),
+          image: AssetImage(AppImages.bgImage),
         ),
       ),
       child: Container(
@@ -29,7 +29,7 @@ class TopSection extends StatelessWidget {
             LogoAndBlurBox(size: size),
             Positioned(
               bottom: size.height*0.05,
-              right: size.width*0.05,
+              right: size.width*0.01,
               child: PersonImg(size: size),
             ),
             Positioned(

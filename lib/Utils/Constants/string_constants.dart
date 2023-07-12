@@ -27,7 +27,7 @@ class AppStrings {
   static const String aboutMeDataTxt2 = '';
   static const String yearsOfExperienceTxt = 'Years Of Experience';
   static const String totalExperience = '01';
-  static const String hireMeTxt = 'Hire Me!';
+  static const String hireMeTxt = 'Contact Me!';
   static const String downloadCvTxt = 'Download CV';
 
   ///[services section]
