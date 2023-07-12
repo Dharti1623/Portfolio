@@ -26,5 +26,5 @@ class AppColor {
 
   static const whatsappColor = Color(0xffc6d5fc);
   static const linkedInColor = Color(0xFFD0EBFA);
-  static const instagramColor = Color(0xfff8cedf);
+  static const gitColor = Color(0xFFE7E7EE);
 }

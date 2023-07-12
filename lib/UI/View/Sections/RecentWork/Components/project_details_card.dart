@@ -51,10 +51,12 @@ class ProjectDetailsCard extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Image.asset(
-                  projectDetails[index].image,
-                  height: size.height * 0.2,
-                  width: size.width * 0.1,
+                Expanded(
+                  child: Image.asset(
+                    projectDetails[index].image,
+                    height: size.height * 0.2,
+                    width: size.width * 0.1,
+                  ),
                 ),
                 Expanded(
                   child: Padding(

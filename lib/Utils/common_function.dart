@@ -22,8 +22,8 @@ launchFacebook() async {
     throw 'Could not launch $url';
   }
 }
-launchInstagram() async {
-  final Uri url =Uri.parse('https://instagram.com/__miss_earth__');
+launchGit() async {
+  final Uri url =Uri.parse('https://github.com/dharti1623');
   if (await canLaunchUrl(url)) {
     await launchUrl(url);
   } else {

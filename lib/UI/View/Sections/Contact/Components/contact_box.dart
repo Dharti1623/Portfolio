@@ -45,10 +45,10 @@ class ContactBox extends StatelessWidget {
                 SocialCards(
                   size: size,
                   // color: Color(0xFFE8F0F9),
-                  color: AppColor.instagramColor,
-                  iconSrc: AppImages.messengerImage,
+                  color: AppColor.gitColor,
+                  iconSrc: AppImages.gitImage,
                   name: AppStrings.messengerDataTxt,
-                  press: launchInstagram,
+                  press: launchGit,
                 ),
                 SocialCards(
                   size: size,

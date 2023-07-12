@@ -46,6 +46,7 @@ class AppImages{
   static const String whatsappImage = 'assets/images/PNG/whatsapp.png';
   static const String facebookImage = 'assets/images/PNG/facebook.png';
   static const String bgImage = 'assets/images/PNG/bg.png';
+  static const String gitImage = 'assets/images/PNG/git.png';
 
 
 }

@@ -22,9 +22,10 @@ class ProjectDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return AlertDialog(
+      insetPadding: EdgeInsets.symmetric(horizontal: size.width*0.15,vertical: size.height*0.1),
       scrollable: true,
       content: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppStyle.dDefaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: size.width*0.05),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -35,15 +36,17 @@ class ProjectDetail extends StatelessWidget {
                       Get.back();
                     },
                     icon: Icon(Icons.close))),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+            Wrap(
+              alignment: WrapAlignment.center,
+              spacing: AppStyle.dDefaultPadding * 2.5,
+              runSpacing: AppStyle.dDefaultPadding * 1.5,
               children: [
-                Image.asset(image, width: size.width*0.1),
-                Center(
-                    child: Text(title,
-                        style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                            fontWeight: FontWeight.bold, color: Colors.black))),
+                FittedBox(
+                  child: Text(title,
+                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                          fontWeight: FontWeight.bold, color: Colors.black)),
+                ),
+                Image.asset(image, width: size.width*0.2),
               ],
             ),
             const SizedBox(height: AppStyle.dDefaultPadding),
@@ -67,7 +70,7 @@ class TitleWithData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding:  EdgeInsets.symmetric(vertical: 8.0,horizontal: MediaQuery.of(context).size.width*0.08),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,11 +78,11 @@ class TitleWithData extends StatelessWidget {
           Expanded(
               child: Text(title,
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.black))),
+                      fontWeight: FontWeight.w600, color: Colors.black))),
           Expanded(
               child: Text(data,
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.black))),
+                      fontWeight: FontWeight.w400, color: Colors.black))),
         ],
       ),
     );
