@@ -44,7 +44,7 @@ class SocialCards extends StatelessWidget {
                 width: 80,
               ),
               SizedBox(width: AppStyle.dDefaultPadding),
-              Text(name),
+              Text(name,style: Theme.of(context).textTheme.labelSmall,),
             ],
           ),
         ),

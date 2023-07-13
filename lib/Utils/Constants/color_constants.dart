@@ -21,7 +21,7 @@ class AppColor {
   static const contactBoxDecorationColor = Color(0xFFE8F0F9);
   static Color boxShadowColor = const Color(0xFFA600FF);
   static Color outlineButtonBorderColor = const Color(0xFFEDEDED);
-  static Color defaultButtonBgColor = const Color(0xFFA3C2E5);
+  static const Color defaultButtonBgColor = Color(0xFFA3C2E5);
   static Color textColor1 = const Color(0xFFDFA3FF).withOpacity(0.5);
 
   static const whatsappColor = Color(0xffc6d5fc);

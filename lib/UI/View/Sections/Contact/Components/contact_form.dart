@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mailto/mailto.dart';
 import 'package:portfolio/UI/CommonWidgets/default_button.dart';
 import 'package:portfolio/UI/View/Sections/Contact/Components/common_textfield.dart';
+import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/image_constant.dart';
 import 'package:portfolio/Utils/Constants/string_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
@@ -96,6 +97,7 @@ class _ContactFormState extends State<ContactForm> {
           Center(
             child: FittedBox(
               child: DefaultButton(
+                color: AppColor.linkedInColor,
                 imageSrc: AppImages.contactIconImage,
                 text: "Contact Me!",
                 press: () async {

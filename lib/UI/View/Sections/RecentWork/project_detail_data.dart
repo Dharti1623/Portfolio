@@ -88,3 +88,6 @@ class TitleWithData extends StatelessWidget {
     );
   }
 }
+// /Users/ips-168/Library/Android/sdk/tools/bin/sdkmanager --update
+//
+// /Users/ips-168/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager --update

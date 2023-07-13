@@ -34,7 +34,7 @@ class MyOutlineButton extends StatelessWidget {
           children: [
             Image.asset(
               imageSrc,
-              height: 30,
+              width: 40,height: 40,
             ),
             SizedBox(width: size.width * 0.01),
             Text(text,style: AppTxtStyle.boldButtonTxtStyle(context),)

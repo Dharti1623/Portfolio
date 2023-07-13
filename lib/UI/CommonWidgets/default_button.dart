@@ -5,6 +5,7 @@ import 'package:portfolio/Utils/Constants/style_constant.dart';
 class DefaultButton extends StatelessWidget {
   final String imageSrc, text;
   final VoidCallback press;
+  Color color;
   Size size;
 
   DefaultButton(
@@ -12,7 +13,8 @@ class DefaultButton extends StatelessWidget {
       required this.imageSrc,
       required this.text,
       required this.press,
-      required this.size});
+      required this.size,
+        this.color = AppColor.defaultButtonBgColor});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,9 @@ class DefaultButton extends StatelessWidget {
       padding: const EdgeInsets.all(AppStyle.dDefaultPadding),
       child: FilledButton(
         style: FilledButton.styleFrom(
-          backgroundColor: AppColor.defaultButtonBgColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          backgroundColor: color,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
           padding: const EdgeInsets.symmetric(
             vertical: AppStyle.dDefaultPadding,
             horizontal: AppStyle.dDefaultPadding * 2.5,
@@ -32,7 +35,7 @@ class DefaultButton extends StatelessWidget {
           fit: BoxFit.fitHeight,
           child: Row(
             children: [
-              Image.asset(imageSrc, height: 30),
+              Image.asset(imageSrc, width: 40,height: 40,),
               SizedBox(width: size.width * 0.01),
               Text(
                 text,
