@@ -37,8 +37,8 @@ class ServiceCard extends StatelessWidget {
               AnimatedContainer(
                 duration: duration,
                 padding: EdgeInsets.all(AppStyle.dDefaultPadding * 1.5),
-                height: size.height*0.135,
-                width: size.width*0.065,
+                height: size.height*0.2,
+                width: size.width*0.07,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
@@ -52,13 +52,15 @@ class ServiceCard extends StatelessWidget {
                   ],
                 ),
                 child: Image.asset(
-                  services[index].image,
-                  fit: BoxFit.fill,
+                  services[index].image,height: 200,width: 200/*,fit: BoxFit.fill*/,
                 ),
               ),
-              Text(
-                services[index].title,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: AppColor.dTextColor),
+              Padding(
+                padding: const EdgeInsets.only(top: 1.0),
+                child: Text(
+                  services[index].title,
+                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.dTextColor,fontWeight: FontWeight.bold),
+                ),
               ),
             ],
           ),

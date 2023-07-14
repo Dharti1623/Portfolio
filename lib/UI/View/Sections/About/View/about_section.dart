@@ -23,20 +23,15 @@ class AboutSection extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const AboutText(),
-              const Expanded(
-                child: AboutSectionText(
-                  text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                ),
+              const AboutSectionText(
+                text: AppStrings.aboutMeLeftTxt,
               ),
-              ExperienceCard(numOfExp: AppStrings.totalExperience,size:size),
-              const Expanded(
-                child: AboutSectionText(
-                  text:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                ),
+              ExperienceCard(numOfExp: AppStrings.totalExperience, size: size),
+              const AboutSectionText(
+                text: AppStrings.aboutMeRightTxt,
               ),
             ],
           ),
@@ -46,14 +41,14 @@ class AboutSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MyOutlineButton(
-                  size: size ,
+                  size: size,
                   imageSrc: AppImages.handImage,
-                  text:AppStrings.hireMeTxt,
+                  text: AppStrings.hireMeTxt,
                   press: hireMe,
                 ),
-                SizedBox(width: size.width*0.01),
+                SizedBox(width: size.width * 0.01),
                 DefaultButton(
-                  size: size ,
+                  size: size,
                   imageSrc: AppImages.downloadImage,
                   text: AppStrings.downloadCvTxt,
                   press: downLoadCv,

@@ -23,12 +23,14 @@ class AppStrings {
 
   ///[about section]
   static const String aboutMeTxt = 'About \nMe';
-  static const String aboutMeDataTxt1 = '';
-  static const String aboutMeDataTxt2 = '';
   static const String yearsOfExperienceTxt = 'Years Of Experience';
   static const String totalExperience = '01';
   static const String hireMeTxt = 'Contact Me!';
   static const String downloadCvTxt = 'Download CV';
+  static const String aboutMeLeftTxt =
+      "Hello, I'm Dharti Chauhan, a Flutter Developer. My area of expertise is mobile and web application development, and I have over 1.1 years of experience.I hold a Master's Degree in Computer Applications and have successfully completed several exciting projects throughout my career. One of my most notable accomplishments was successfully cracking an interview at Infosys during my bachelor's placement.";
+  static const String aboutMeRightTxt =
+      "I invite you to explore my portfolio to learn more about the projects I have undertaken. If you would like to discuss how I can contribute to your next venture or if you have any inquiries, please don't hesitate to reach out to me at dharti6196@gmail.com. I look forward to connecting with you!";
 
   ///[services section]
 
@@ -43,7 +45,8 @@ class AppStrings {
   ///[recent works section]
 
   static const String startingNewProjectTxt = 'Starting New Project?';
-  static const String estimateNewProjectTxt ='Get an estimate for the new project';
+  static const String estimateNewProjectTxt =
+      'Get an estimate for the new project';
   static const String recentWorksTxt = 'Project Details';
 
   ///[contact section]
@@ -72,5 +75,4 @@ class AppStrings {
   static const String contactChkTxt = 'Contact Number did not match';
   static const String validContactChkTxt = 'Please enter valid mobile number';
   static const String contactNotCorrectTxt = 'Enter correct contact';
-
 }
