@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 
 class ProjectDetail extends StatelessWidget {
   String title, description, techStack, database, role, category, image;
@@ -22,41 +24,43 @@ class ProjectDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return AlertDialog(
-      insetPadding: EdgeInsets.symmetric(horizontal: size.width*0.15,vertical: size.height*0.1),
+      // backgroundColor: AppColor.boxDecorationColor2,
+      insetPadding: EdgeInsets.symmetric(
+        horizontal: isWidthGrater(size) ? size.width * 0.3 : size.width * 0.1,
+        vertical: isWidthGrater(size) ? size.height * 0.1 : size.height * 0.1,
+        // horizontal: size.width * 0.1,
+        // vertical: size.height * 0.1,
+      ),
+      contentPadding: EdgeInsets.zero,
       scrollable: true,
-      content: Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width*0.05),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Align(
-                alignment: Alignment.centerRight,
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AppBar(
+            title: Text(title,
+                style: AppTxtStyle.appbarStyle(context)),
+            centerTitle: true,
+            backgroundColor: AppColor.transparentClr,
+            leading: SizedBox(),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: IconButton(
                     onPressed: () {
                       Get.back();
                     },
-                    icon: Icon(Icons.close))),
-            Wrap(
-              alignment: WrapAlignment.center,
-              spacing: AppStyle.dDefaultPadding * 2.5,
-              runSpacing: AppStyle.dDefaultPadding * 1.5,
-              children: [
-                FittedBox(
-                  child: Text(title,
-                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.black)),
-                ),
-                Image.asset(image, width: size.width*0.2),
-              ],
-            ),
-            const SizedBox(height: AppStyle.dDefaultPadding),
-            TitleWithData(title: 'Description : ', data: description),
-            TitleWithData(title: 'Category : ', data: category),
-            TitleWithData(title: 'Tech Stack : ', data: techStack),
-            TitleWithData(title: 'Role : ', data: role),
-            TitleWithData(title: 'Database : ', data: database),
-          ],
-        ),
+                    icon: Icon(Icons.close)),
+              ),
+            ],
+          ),
+          Image.asset(image, width: size.width * 0.2),
+          const SizedBox(height: AppStyle.dDefaultPadding),
+          TitleWithData(title: 'Category : ', data: category),
+          TitleWithData(title: 'Tech Stack : ', data: techStack),
+          TitleWithData(title: 'Database : ', data: database),
+          TitleWithData(title: 'Role : ', data: role),
+          TitleWithData(title: 'Description : ', data: description),
+        ],
       ),
     );
   }
@@ -66,11 +70,37 @@ class TitleWithData extends StatelessWidget {
   String title, data;
 
   TitleWithData({super.key, required this.data, required this.title});
+  Widget build(BuildContext context) {
+    final dataController = TextEditingController();
+    dataController.text = data;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      child: TextField(
+        style:AppTxtStyle.descriptionStyle(context),
+        controller: dataController,
+        maxLines: 10,
+        minLines: 1,
+        enabled: false,
+        decoration: InputDecoration(
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5.0),
+            borderSide: BorderSide(
+              color: AppColor.dLightColor,
+            ),
+          ),
+          filled: false,
+          labelText: title,
+          labelStyle:AppTxtStyle.titleStyle(context),
+        ),
+      ),
+    );
+  }
 
-  @override
+/*  @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: 8.0,horizontal: MediaQuery.of(context).size.width*0.08),
+      padding: EdgeInsets.symmetric(
+          vertical: 8.0, horizontal: MediaQuery.of(context).size.width * 0.08),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,8 +116,5 @@ class TitleWithData extends StatelessWidget {
         ],
       ),
     );
-  }
+  }*/
 }
-// /Users/ips-168/Library/Android/sdk/tools/bin/sdkmanager --update
-//
-// /Users/ips-168/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager --update

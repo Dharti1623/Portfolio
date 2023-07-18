@@ -26,34 +26,40 @@ class AboutSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const AboutText(),
-              const AboutSectionText(
+              AboutSectionText(
+                size : size,
                 text: AppStrings.aboutMeLeftTxt,
               ),
               ExperienceCard(numOfExp: AppStrings.totalExperience, size: size),
-              const AboutSectionText(
+              AboutSectionText(
+                size : size,
                 text: AppStrings.aboutMeRightTxt,
               ),
             ],
           ),
           const SizedBox(height: AppStyle.dDefaultPadding * 3),
-          FittedBox(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MyOutlineButton(
-                  size: size,
-                  imageSrc: AppImages.handImage,
-                  text: AppStrings.hireMeTxt,
-                  press: hireMe,
-                ),
-                SizedBox(width: size.width * 0.01),
-                DefaultButton(
-                  size: size,
-                  imageSrc: AppImages.downloadImage,
-                  text: AppStrings.downloadCvTxt,
-                  press: downLoadCv,
-                ),
-              ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MyOutlineButton(
+                    size: size,
+                    imageSrc: AppImages.handImage,
+                    text: AppStrings.hireMeTxt,
+                    press: hireMe,
+                  ),
+                  SizedBox(width: size.width * 0.01),
+                  DefaultButton(
+                    size: size,
+                    imageSrc: AppImages.downloadImage,
+                    text: AppStrings.downloadCvTxt,
+                    press: downLoadCv,
+                  ),
+                ],
+              ),
             ),
           ),
         ],

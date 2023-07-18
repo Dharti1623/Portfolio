@@ -5,6 +5,7 @@ import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/image_constant.dart';
 import 'package:portfolio/Utils/Constants/string_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 RxInt selectedIndex = 0.obs;
@@ -29,8 +30,10 @@ class Menu extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(right: AppStyle.dDefaultPadding,left: AppStyle.dDefaultPadding),
       constraints: BoxConstraints(maxWidth: size.width),
-      height: size.height * 0.12,
-      width: size.width*0.6,
+      height: isWidthGrater(size) ? size.height * 0.12 : size.width * 0.1,
+      width: isWidthGrater(size) ? size.width*0.6 : size.width*0.62,
+      // height: size.height * 0.12,
+      // width: size.width*0.6,
       decoration: BoxDecoration(
         color: AppColor.bgWhiteClr,
         borderRadius: const BorderRadius.only(

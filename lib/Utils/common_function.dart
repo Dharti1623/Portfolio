@@ -50,3 +50,28 @@ downLoadCv() async {
   throw 'Could not launch $url';
   }
 }
+
+
+
+sendMail(String subject,String data) async {
+  // var url = Uri.parse('mailto:dharti1639@gmail.com?subject=${Uri.encodeComponent(subject)}&body=${Uri.encodeComponent(data)}');
+  // mailto:smith@example.org?subject=News&body=New%20plugin
+  final Uri url = Uri(
+    scheme: 'mailto',
+    path: 'dharti1639@gmail.com',
+    query: 'subject=${Uri.encodeComponent(subject)}&body=${Uri.encodeComponent(data)}',
+  );
+
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+
+isWidthGrater(Size size){
+  return size.height < size.width;
+}
+
+

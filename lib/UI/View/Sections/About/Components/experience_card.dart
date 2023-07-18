@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 
 class ExperienceCard extends StatelessWidget {
   final String numOfExp;
@@ -13,8 +14,10 @@ class ExperienceCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: AppStyle.dDefaultPadding),
       padding: EdgeInsets.all(AppStyle.dDefaultPadding),
-      height: size.height * 0.27,
-      width: size.width * 0.14,
+      height: isWidthGrater(size) ? size.height * 0.27 : size.width * 0.2,
+      width: isWidthGrater(size) ? size.height * 0.27 : size.width * 0.2,
+      // height: size.height * 0.27,
+      // width: size.width * 0.14,
       decoration: BoxDecoration(
         color: AppColor.projectBoxDecorationColor,
         borderRadius: BorderRadius.circular(10),

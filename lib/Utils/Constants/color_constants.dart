@@ -14,6 +14,7 @@ class AppColor {
   static const projectsSectionTitleLineClr = Color(0xFFFFB100);
 
   static const dTextColor = Color(0xFF707070);
+  static const dLightColor = Color(0xFFC5C1C1);
   static const dTextLightColor = Color(0xFF555555);
 
   static const projectBoxDecorationColor = Color(0xFFF7E8FF);

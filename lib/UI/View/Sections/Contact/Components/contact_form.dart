@@ -100,18 +100,12 @@ class _ContactFormState extends State<ContactForm> {
                 color: AppColor.linkedInColor,
                 imageSrc: AppImages.contactIconImage,
                 text: "Contact Me!",
-                press: () async {
+                press: () {
                   if (contactFormKey.currentState!.validate()) {
                     String subject = projectTypeController.text;
                     String stringText =
                         "Name : ${nameController.text} \n Email: ${emailController.text} \n Project Type:${projectTypeController.text} \n Project Budget : ${projectBudgetController.text} \n Description : ${descriptionController.text}";
-                    var url = Uri.parse(
-                        'mailto:dharti1639@gmail.com?subject=${Uri.encodeComponent(subject)}&body=${Uri.encodeComponent(stringText)}');
-                    if (await canLaunchUrl(url)) {
-                      await launchUrl(url);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
+                    sendMail(subject,stringText);
                   }
                 },
                 size: widget.size,

@@ -24,19 +24,22 @@ class ServiceSection extends StatelessWidget {
             title: AppStrings.technicalSkillsTxt,
             subTitle: AppStrings.frameworkTxt,
           ),
-          FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: List.generate(
-                  services.length,
-                  (index) => Padding(
-                        padding: EdgeInsets.symmetric(horizontal: size.width*0.01),
-                        child: ServiceCard(
-                          index: index,
-                          size: size,
-                        ),
-                      )),
+          Padding(
+            padding:const EdgeInsets.symmetric(horizontal: 20.0),
+            child: FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: List.generate(
+                    services.length,
+                    (index) => Padding(
+                          padding: EdgeInsets.symmetric(horizontal: size.width*0.01),
+                          child: ServiceCard(
+                            index: index,
+                            size: size,
+                          ),
+                        )),
+              ),
             ),
           )
         ],

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:portfolio/Data/Models/services.dart';
 import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 
 // ignore: must_be_immutable
 class ServiceCard extends StatelessWidget {
@@ -24,8 +25,10 @@ class ServiceCard extends StatelessWidget {
         child: AnimatedContainer(
           duration: duration,
           margin: EdgeInsets.symmetric(vertical: size.width*0.02),
-          height: size.height * 0.3,
-          width: size.width * 0.14,
+          // height: size.height * 0.3,
+          // width: size.width * 0.14,
+          height: isWidthGrater(size) ? size.height * 0.3 : size.height * 0.2,
+          width: isWidthGrater(size) ? size.width * 0.14 : size.height * 0.14,
           decoration: BoxDecoration(
             color: services[index].color,
             borderRadius: BorderRadius.circular(10),
@@ -37,8 +40,10 @@ class ServiceCard extends StatelessWidget {
               AnimatedContainer(
                 duration: duration,
                 padding: EdgeInsets.all(AppStyle.dDefaultPadding * 1.5),
-                height: size.height*0.2,
-                width: size.width*0.07,
+                height: isWidthGrater(size) ? size.height*0.2 : size.height*0.1,
+                width: isWidthGrater(size) ? size.width*0.085 : size.height*0.1,
+                // height: size.height*0.2,
+                // width: size.width*0.07,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
@@ -57,9 +62,11 @@ class ServiceCard extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 1.0),
-                child: Text(
-                  services[index].title,
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.dTextColor,fontWeight: FontWeight.bold),
+                child: FittedBox(
+                  child: Text(
+                    services[index].title,
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: AppColor.dTextColor,fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ],

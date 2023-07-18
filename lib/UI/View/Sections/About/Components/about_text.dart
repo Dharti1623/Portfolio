@@ -10,9 +10,11 @@ class AboutText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          AppStrings.aboutMeTxt,
-          style: Theme.of(context).textTheme.displayMedium!.copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+        FittedBox(
+          child: Text(
+            AppStrings.aboutMeTxt,
+            style: Theme.of(context).textTheme.displayMedium!.copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+          ),
         ),
       ],
     );
