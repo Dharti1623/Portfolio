@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portfolio/UI/CommonWidgets/default_button.dart';
 import 'package:portfolio/UI/View/Sections/Top/components/menu.dart';
 import 'package:portfolio/Utils/Constants/color_constants.dart';

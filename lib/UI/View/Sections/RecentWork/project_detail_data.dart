@@ -26,8 +26,8 @@ class ProjectDetail extends StatelessWidget {
     return AlertDialog(
       // backgroundColor: AppColor.boxDecorationColor2,
       insetPadding: EdgeInsets.symmetric(
-        horizontal: isWidthGrater(size) ? size.width * 0.3 : size.width * 0.1,
-        vertical: isWidthGrater(size) ? size.height * 0.1 : size.height * 0.1,
+        horizontal: isWidthGrater(size) ? size.width * 0.15 : size.width * 0.1,
+        vertical: isWidthGrater(size) ? size.height * 0.1 : size.height * 0.05,
         // horizontal: size.width * 0.1,
         // vertical: size.height * 0.1,
       ),
@@ -60,6 +60,7 @@ class ProjectDetail extends StatelessWidget {
           TitleWithData(title: 'Database : ', data: database),
           TitleWithData(title: 'Role : ', data: role),
           TitleWithData(title: 'Description : ', data: description),
+          const SizedBox(height: AppStyle.dDefaultPadding),
         ],
       ),
     );

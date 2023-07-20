@@ -1,5 +1,10 @@
+import 'dart:convert';
+import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+RxBool isContact = false.obs;
 
 getStatusBarHeight(context) {
   return MediaQuery.of(context).viewPadding.top;
@@ -51,9 +56,39 @@ downLoadCv() async {
   }
 }
 
+Future sendEmail(
+    {required String name,
+    required String email,
+    required String projectType,
+    required String projectBudget,
+    required String description}) async {
 
+  print("object1");
+  isContact.value = true;
+  final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+  const serviceId = 'service_ott700l';
+  const templateId = 'template_o72e41k';
+  const userId = 'V67MfoSnmzayLwyzb';
+  final response = await http.post(url,
+      headers: {'Content-Type': 'application/json'},//This line makes sure it works for all platforms.
+      body: json.encode({
+        'service_id': serviceId,
+        'template_id': templateId,
+        'user_id': userId,
+        'template_params': {
+          'name' : name,
+          'email': email,
+          'projectType': projectType,
+          'projectBudget' : projectBudget,
+          'description' : description,
+        }
+      }));
+  isContact.value = response.statusCode == 200 ? false : true ;
+  print("response-->${response.statusCode}");
+  return response.statusCode;
+}
 
-sendMail(String subject,String data) async {
+/*sendMail(String subject,String data) async {
   // var url = Uri.parse('mailto:dharti1639@gmail.com?subject=${Uri.encodeComponent(subject)}&body=${Uri.encodeComponent(data)}');
   // mailto:smith@example.org?subject=News&body=New%20plugin
   final Uri url = Uri(
@@ -67,7 +102,7 @@ sendMail(String subject,String data) async {
   } else {
     throw 'Could not launch $url';
   }
-}
+}*/
 
 
 isWidthGrater(Size size){

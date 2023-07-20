@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portfolio/Utils/Constants/color_constants.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
+import 'package:portfolio/Utils/common_function.dart';
 
 class DefaultButton extends StatelessWidget {
   final String imageSrc, text;
@@ -14,7 +16,7 @@ class DefaultButton extends StatelessWidget {
       required this.text,
       required this.press,
       required this.size,
-        this.color = AppColor.defaultButtonBgColor});
+      this.color = AppColor.defaultButtonBgColor});
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +35,21 @@ class DefaultButton extends StatelessWidget {
         onPressed: press,
         child: FittedBox(
           fit: BoxFit.fitHeight,
-          child: Row(
-            children: [
-              Image.asset(imageSrc, width: 40,height: 40,),
-              SizedBox(width: size.width * 0.01),
-              Text(
-                text,
-                style: AppTxtStyle.boldButtonColorTxtStyle(context),
-              ),
-            ],
-          ),
-        ),
+          child:Row(
+                  children: [
+                    Image.asset(
+                      imageSrc,
+                      width: 40,
+                      height: 40,
+                    ),
+                    SizedBox(width: size.width * 0.01),
+                    Text(
+                      text,
+                      style: AppTxtStyle.boldButtonColorTxtStyle(context),
+                    ),
+                  ],
+                ),
       ),
-    );
+    ));
   }
 }

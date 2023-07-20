@@ -14,6 +14,7 @@ class CommonTextFormField extends StatelessWidget {
   final bool autocorrect;
   TextInputAction textInputAction;
   int errorMaxLines;
+  // var? autovalidateMode;
 
   CommonTextFormField({
     super.key,

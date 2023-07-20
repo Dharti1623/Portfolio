@@ -11,43 +11,24 @@ import 'package:portfolio/Utils/Constants/validations.dart';
 import 'package:portfolio/Utils/common_function.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ContactForm extends StatefulWidget {
+class ContactForm extends StatelessWidget {
   Size size;
 
   ContactForm({super.key, required this.size});
 
-  @override
-  State<ContactForm> createState() => _ContactFormState();
-}
-
-class _ContactFormState extends State<ContactForm> {
   GlobalKey<FormState> contactFormKey = GlobalKey<FormState>();
+
   final nameController = TextEditingController();
+
   final emailController = TextEditingController();
+
   final projectTypeController = TextEditingController();
+
   final projectBudgetController = TextEditingController();
+
   final descriptionController = TextEditingController();
 
-  @override
-  void initState() {
-    nameController.text = "";
-    emailController.text = "";
-    projectTypeController.text = "";
-    projectBudgetController.text = "";
-    descriptionController.text = "";
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    nameController.dispose();
-    emailController.dispose();
-    projectTypeController.dispose();
-    projectBudgetController.dispose();
-    descriptionController.dispose();
-    super.dispose();
-  }
-
+  // @override
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -80,7 +61,7 @@ class _ContactFormState extends State<ContactForm> {
           CommonTextFormField(
             labelText: AppStrings.projectBudgetTxt,
             hintText: AppStrings.selectBudgetTxt,
-            width: widget.size.width * 0.9,
+            width: size.width * 0.9,
             validator: (String? value) => Validations.emptyValidation(value),
             controller: projectBudgetController,
           ),
@@ -89,26 +70,47 @@ class _ContactFormState extends State<ContactForm> {
             minLines: 2,
             labelText: AppStrings.descriptionTxt,
             hintText: AppStrings.writeSomethingTxt,
-            width: widget.size.width * 0.9,
+            width: size.width * 0.9,
             validator: (String? value) => Validations.emptyValidation(value),
             controller: descriptionController,
           ),
           const SizedBox(height: AppStyle.dDefaultPadding * 2),
-          Center(
-            child: FittedBox(
-              child: DefaultButton(
-                color: AppColor.linkedInColor,
-                imageSrc: AppImages.contactIconImage,
-                text: "Contact Me!",
-                press: () {
-                  if (contactFormKey.currentState!.validate()) {
-                    String subject = projectTypeController.text;
-                    String stringText =
-                        "Name : ${nameController.text} \n Email: ${emailController.text} \n Project Type:${projectTypeController.text} \n Project Budget : ${projectBudgetController.text} \n Description : ${descriptionController.text}";
-                    sendMail(subject,stringText);
-                  }
-                },
-                size: widget.size,
+          Obx(
+            () => Center(
+              child: FittedBox(
+                child: isContact.value
+                    ? const CircularProgressIndicator(
+                        color: AppColor.bgBlackClr,
+                      )
+                    : DefaultButton(
+                        color: AppColor.linkedInColor,
+                        imageSrc: AppImages.contactIconImage,
+                        text: "Contact Me!",
+                        press: () {
+                          if (contactFormKey.currentState!.validate()) {
+                            var response = sendEmail(
+                                    name: nameController.text.trim(),
+                                    email: emailController.text.trim(),
+                                    projectType:
+                                        projectTypeController.text.trim(),
+                                    projectBudget:
+                                        projectBudgetController.text.trim(),
+                                    description:
+                                        descriptionController.text.trim())
+                                .then((value) {
+                              Get.rawSnackbar(
+                                  message: 'Thank you for Connecting...!!');
+                              contactFormKey.currentState!.reset();
+                              nameController.clear();
+                              emailController.clear();
+                              projectTypeController.clear();
+                              projectBudgetController.clear();
+                              descriptionController.clear();
+                            });
+                          }
+                        },
+                        size: size,
+                      ),
               ),
             ),
           )

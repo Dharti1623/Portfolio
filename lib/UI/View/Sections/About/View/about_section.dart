@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portfolio/UI/CommonWidgets/default_button.dart';
 import 'package:portfolio/UI/CommonWidgets/my_outline_button.dart';
 import 'package:portfolio/UI/View/Sections/About/Components/about_section_text.dart';

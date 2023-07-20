@@ -61,7 +61,7 @@ class AppTxtStyle {
 
   static TextStyle titleStyle(BuildContext context) {
     return GoogleFonts.nunitoSans(
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w800,
         color: AppColor.dTextLightColor,
         height: 2,
         fontSize: 20);

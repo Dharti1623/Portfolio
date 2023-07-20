@@ -41,6 +41,7 @@ dependencies:
   pretty_button: ^0.0.5
   url_launcher: ^6.1.12
   mailto: ^2.0.0
+  http: ^1.1.0
 
 
 dev_dependencies:
