@@ -43,6 +43,7 @@ class AppImages{
   static const String work3Image = 'assets/images/PNG/work-3.png';
   static const String work4Image = 'assets/images/PNG/work-4.png';
   static const String work5Image = 'assets/images/PNG/work-5.png';
+  static const String work6Image = 'assets/images/PNG/iphone.png';
   static const String whatsappImage = 'assets/images/PNG/whatsapp.png';
   static const String facebookImage = 'assets/images/PNG/facebook.png';
   static const String bgImage = 'assets/images/PNG/bg.png';
