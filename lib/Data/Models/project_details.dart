@@ -75,5 +75,15 @@ List<ProjectDetails> projectDetails = [
     category: "Demo Project",
     image: AppImages.work5Image,
   ),
+  ProjectDetails(
+    id: 6,
+    title: "Pretty_button",
+    description: '<b>pretty_button</b> a pretty and customizable 3D button for your flutter project with minimal design and highly customizable.\nIt can be use as a 3d button and also you can customize it.\nYou can also make button disable using isDisable property.',
+    techStack: 'Flutter',
+    database: '-',
+    role: 'Project development, testing website',
+    category: "Portfolio web",
+    image: AppImages.work6Image,
+  ),
 ];
 
