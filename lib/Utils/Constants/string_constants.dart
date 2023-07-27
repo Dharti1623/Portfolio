@@ -26,7 +26,7 @@ class AppStrings {
   static const String yearsOfExperienceTxt = 'Years Of Experience';
   static const String totalExperience = '01';
   static const String hireMeTxt = 'Contact Me!';
-  static const String downloadCvTxt = 'Download CV';
+  static const String downloadCvTxt = 'Open CV';
   static const String aboutMeLeftTxt =
       "Hello, I'm Dharti Chauhan, a Flutter Developer. My area of expertise is mobile and web application development, and I have over 1.1 years of experience.I hold a Master's Degree in Computer Applications and have successfully completed several exciting projects throughout my career. One of my most notable accomplishments was successfully cracking an interview at Infosys during my bachelor's placement.";
   static const String aboutMeRightTxt =
