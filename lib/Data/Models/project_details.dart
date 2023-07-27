@@ -38,7 +38,7 @@ List<ProjectDetails> projectDetails = [
   ProjectDetails(
     id: 2,
     title: "     Stocard     ",
-    description: 'This Application provides the facility to digitize your card in one app. customers can add store and in particular stores they can add their loyalty cards. So in store customers can get scanned their cards by phone and take the benefit of rewards.Customers can also make payment from this application',
+    description: 'This Application provides the facility to digitize your card in one app. \ncustomers can add store and in particular stores they can add their loyalty cards. \nSo in store customers can get scanned their cards by phone and take the benefit of rewards.\nCustomers can also make payment from this application',
     techStack: 'PHP-Laravel(API)',
     database: '-',
     role: 'Project development, testing website',
@@ -48,7 +48,7 @@ List<ProjectDetails> projectDetails = [
   ProjectDetails(
     id: 3,
     title: "Women Empowerment",
-    description: 'This app was developed in flutter for android and iOS support. It is based on rising for women who wants to start there mini startup, loans are provided to the women as per there need. It is a fixed cost app.',
+    description: 'This app was developed in flutter for android and iOS support. \nIt is based on rising for women who wants to start there mini startup, loans are provided to the women as per there need. It is a fixed cost app.',
     techStack: 'Flutter',
     database: '-',
     role: 'Project development, testing website',
@@ -58,7 +58,7 @@ List<ProjectDetails> projectDetails = [
   ProjectDetails(
     id: 4,
     title: "  Treasure Hunt  ",
-    description: 'This app was developed in flutter for android and iOS support. It\'s main purpose was to scan the QR code and show the animated model developed in the blender and it will perform TTS and tell the clue for next QR.',
+    description: 'This app was developed in flutter for android and iOS support. \nIt\'s main purpose was to scan the QR code and show the animated model developed in the blender and it will perform TTS and tell the clue for next QR.',
     techStack: 'Flutter,',
     database: '-',
     role: 'Project development, testing website',
@@ -78,11 +78,11 @@ List<ProjectDetails> projectDetails = [
   ProjectDetails(
     id: 6,
     title: "Pretty_button",
-    description: '<b>pretty_button</b> a pretty and customizable 3D button for your flutter project with minimal design and highly customizable.\nIt can be use as a 3d button and also you can customize it.\nYou can also make button disable using isDisable property.',
+    description: 'pretty_button a pretty and customizable 3D button for your flutter project with minimal design and highly customizable.\nIt can be use as a 3d button and also you can customize it.\nYou can also make button disable using isDisable property.\nyou can find this from : https://pub.dev/packages/pretty_button',
     techStack: 'Flutter',
     database: '-',
     role: 'Project development, testing website',
-    category: "Portfolio web",
+    category: "Flutter package",
     image: AppImages.work6Image,
   ),
 ];
