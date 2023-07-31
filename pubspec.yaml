@@ -42,6 +42,7 @@ dependencies:
   url_launcher: ^6.1.12
   mailto: ^2.0.0
   http: ^1.1.0
+  string_validator_plus: ^0.0.4
 
 
 dev_dependencies:

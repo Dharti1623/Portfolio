@@ -22,7 +22,7 @@ class ProjectDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var size = MediaQuery.sizeOf(context);
     return AlertDialog(
       // backgroundColor: AppColor.boxDecorationColor2,
       insetPadding: EdgeInsets.symmetric(
@@ -101,7 +101,7 @@ class TitleWithData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-          vertical: 8.0, horizontal: MediaQuery.of(context).size.width * 0.08),
+          vertical: 8.0, horizontal: MediaQuery.sizeOf(context).width * 0.08),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

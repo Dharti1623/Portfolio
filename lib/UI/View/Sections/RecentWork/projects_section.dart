@@ -13,7 +13,7 @@ class ProjectsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var size = MediaQuery.sizeOf(context);
     return  Container(
       // constraints: BoxConstraints(maxWidth: 1110),
       width: double.infinity,
