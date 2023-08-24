@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/UI/View/HomePageModule/appbar_data.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:portfolio/Utils/Constants/style_constant.dart';
-//1,3,4,7,
 import '../../../Data/Models/pagesModel.dart';
 
 class HomePage extends StatefulWidget {

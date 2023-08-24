@@ -68,7 +68,7 @@ List<ProjectDetails> projectDetails = [
   ProjectDetails(
     id: 5,
     title: "       Mix       ",
-    description: 'It is a demo app which includes demo og payment gateway,Google ad sense,firebase auth ,google sign-in/sign-up and beautiful music app design.',
+    description: 'It is a demo app which includes demo of payment gateway,Google ad sense,firebase auth ,google sign-in/sign-up and beautiful music app design.',
     techStack: 'Flutter',
     database: '-',
     role: 'Project development, testing website',

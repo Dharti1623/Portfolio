@@ -48,7 +48,7 @@ hireMe() async {
 
 
 downLoadCv() async {
-  final Uri url =Uri.parse('https://drive.google.com/file/d/1w4qoE5ujA5U7sO-C65cP2TllSEBMbSsc/view?usp=sharing');
+  final Uri url =Uri.parse('https://drive.google.com/file/d/1tly6IX2NtdHOyNYNYqLaEbEOz8_Ltq_S/view?usp=sharing');
   if (await canLaunchUrl(url)) {
   await launchUrl(url);
   } else {
